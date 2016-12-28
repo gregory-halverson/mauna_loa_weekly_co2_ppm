@@ -1,0 +1,362 @@
+data <- read.csv('mauna_loa_weekly_co2_ppm.csv')
+View(data)
+rm(list=ls())
+df <- read.csv('mauna_loa_weekly_co2_ppm.csv')
+df$date <- as.Date(paste(df$year, df$month, df$day, sep='.'), format='%Y.%m.%d')
+View(df)
+plot(df$date, df$co2_ppm)
+df[df$co2_ppm == -999] = NaN
+plot(df$date, df$co2_ppm)
+head(df[df$co2_ppm < 0])
+head(df[df$co2_ppm < 0,])
+df[df$co2_ppm < 0,]$co2_ppm = NaN
+plot(df$date, df$co2_ppm)
+plot(df$date, df$co2_ppm, type='l')
+source('C:/Users/Gregory/RStudioProjects/mauna_loa_weekly_co2_pmm/mauna_loa_weekly_co2_ppm.R', echo=TRUE)
+source('~/.active-rstudio-document', echo=TRUE)
+View(df)
+source('~/.active-rstudio-document', echo=TRUE)
+View(df)
+source('~/.active-rstudio-document', echo=TRUE)
+View(df)
+head(df[c(1, 2, 3, 5)])
+source('~/.active-rstudio-document', echo=TRUE)
+names(df) <- c('year', 'month', 'day', 'co2ppm')
+head(df)
+knitr::opts_chunk$set(echo = TRUE)
+df[df == -999] <- NA
+summary(df)
+knitr::opts_chunk$set(echo = TRUE)
+df <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_weekly_mlo.txt')
+head(df)
+df <- df[, c(1, 2, 3, 5)]
+head(df)
+names(df) <- c('year', 'month', 'day', 'co2ppm')
+head(df)
+df$date <- as.Date(paste(df$year, df$month, df$day, sep = '-'), format = '%Y-%m-%d')
+head(df)
+df[df == -999] <- NA
+summary(df)
+plot(df$date, df$co2ppm)
+knitr::opts_chunk$set(echo = TRUE)
+df <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_weekly_mlo.txt')
+head(df)
+df <- df[, c(1, 2, 3, 5)]
+head(df)
+names(df) <- c('year', 'month', 'day', 'co2ppm')
+head(df)
+df[df$co2ppm == -999.99]$co2ppm = NA
+df[, df$co2ppm == -999.99]$co2ppm = NA
+df[df$co2ppm == -999.99, ]$co2ppm = NA
+knitr::opts_chunk$set(echo = TRUE)
+df <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_weekly_mlo.txt')
+head(df)
+df <- df[, c(1, 2, 3, 5)]
+head(df)
+names(df) <- c('year', 'month', 'day', 'co2ppm')
+head(df)
+df[df == -999] <- NA
+summary(df)
+knitr::opts_chunk$set(echo = TRUE)
+df <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_weekly_mlo.txt')
+head(df)
+df <- df[, c(1, 2, 3, 5)]
+head(df)
+names(df) <- c('year', 'month', 'day', 'co2ppm')
+head(df)
+summary(df)
+df[df$co2ppm == -999.99, ]$co2ppm = NA
+summary(df)
+df$date <- as.Date(paste(df$year, df$month, df$day, sep = '-'), format = '%Y-%m-%d')
+head(df)
+plot(df$date, df$co2ppm)
+summary(df)
+df$date <- as.Date(paste(df$year, df$month, df$day, sep = '-'), format = '%Y-%m-%d')
+df <- df[, c('date', 'co2ppm')]
+head(df)
+plot(df$date, df$co2ppm)
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'Carbon Dioxide Concentraion (Parts per Million)',
+title = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'Carbon Dioxide Concentraion (Parts per Million)',
+main = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'CO2 Concentraion PPM',
+main = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+knitr::opts_chunk$set(echo = TRUE)
+df <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_weekly_mlo.txt')
+head(df)
+df <- df[, c(1, 2, 3, 5)]
+head(df)
+names(df) <- c('year', 'month', 'day', 'co2ppm')
+head(df)
+df$date <- as.Date(paste(df$year, df$month, df$day, sep = '-'), format = '%Y-%m-%d')
+df <- df[, c('date', 'co2ppm')]
+head(df)
+summary(df)
+df[df$co2ppm == -999.99, ]$co2ppm = NA
+summary(df)
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'CO2 Concentraion PPM',
+main = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'CO2 Concentraion PPM',
+main = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+trend <- lm(df$co2ppm ~ df$date)
+summary(trend)
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'CO2 Concentraion PPM',
+main = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+abline(trend, color = 'red')
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'CO2 Concentraion PPM',
+main = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+abline(trend, col = 'red')
+min(df$co2ppm)
+plot(
+df$date,
+df$co2ppm,
+type = 'l',
+xlab = 'Date',
+ylab = 'CO2 Concentraion PPM',
+main = 'Mauna Loa Weekly Carbon Dioxide Concentration'
+)
+abline(trend, col = 'red')
+install.packages('ggplot')
+library('ggplot')
+install.packages('ggplot2')
+library('ggplot2')
+install.packages('ggplot2')
+library(ggplot2)
+install.packages('ggplot2')
+library(ggplot2)
+if(!require(ggplot2)) {
+install.packages('ggplot2')
+library(ggplot2)
+}
+ggplot2
+if(!require(lazyeval) | !require(ggplot2)) {
+install.packages('lazyeval', 'ggplot2')
+library(lazyeval, ggplot2)
+}
+install.packages("lazyeval", "ggplot2")
+knitr::opts_chunk$set(echo = TRUE)
+if(!require(lazyeval) | !require(ggplot2)) {
+install.packages('lazyeval', 'ggplot2')
+library(lazyeval, ggplot2)
+}
+ggplot(aes(date, co2ppm, data = df)) +
+geom_point()
+ggplot(data = df, aes(date, co2ppm)) +
+geom_point()
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line()
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration')
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth()
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(
+formula = co2ppm ~ date
+)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(
+formula = lm(co2ppm ~ date)
+)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(
+formula = co2ppm ~ date
+)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(
+formula = co2ppm ~ date,
+se = TRUE
+)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(
+method = lm,
+formula = co2ppm ~ date,
+se = TRUE
+)
+source('~/.active-rstudio-document', echo=TRUE)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(
+method = lm,
+# formula = co2ppm ~ date,
+# se = TRUE
+)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(
+method = lm
+# formula = co2ppm ~ date,
+# se = TRUE
+)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(aes(color = 'red'), method = lm)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm)
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red')
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red') +
+scale_x_continuous(breaks = round(seq(min(dat$x), max(dat$x), by = 0.5),1))
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red') +
+scale_x_continuous(breaks = round(seq(min(date), max(date), by = 1), 1))
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red') +
+scale_x_continuous(breaks = round(seq(min(df$date), max(df$date), by = 1), 1))
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red') +
+scale_x_continuous(breaks = pretty(n = 30))
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red') +
+scale_x_continuous(breaks = pretty(df$date, n = 30))
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red')
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red') +
+scale_x_date(breaks = date_breaks('week'))
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red') +
+scale_x_date(breaks = '10 years')
+ggplot(data = df, aes(date, co2ppm)) +
+geom_line() +
+xlab('Date') +
+ylab('CO2 Concentraion PPM') +
+ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +
+stat_smooth(method = lm, color = 'red')
+if(!require(dplyr)) {
+install.packages('dplyr')
+library(dplyr)
+}
+as.Date('2016-12-25')
+as.Date('2016-12-25') > '2016-12-24'
+as.Date('2016-12-25') < '2016-12-24'
+year(as.Date('2016-12-25'))
+if(!require(dplyr) | !require(lubridate)) {
+install.packages('dplyr', 'lubridate')
+library(dplyr, lubridate)
+}
+install.packages("dplyr", "lubridate")
+knitr::opts_chunk$set(echo = TRUE)
+if(!require(dplyr) | !require(lubridate)) {
+install.packages('dplyr', 'lubridate')
+library(dplyr, lubridate)
+}
+install.packages("dplyr", "lubridate")

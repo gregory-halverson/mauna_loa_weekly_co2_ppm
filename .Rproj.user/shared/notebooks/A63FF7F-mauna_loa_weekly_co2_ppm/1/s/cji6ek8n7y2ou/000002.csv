@@ -1,0 +1,3 @@
+"0","mauna_loa_yearly <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt')"
+"0","names(mauna_loa_yearly) <- c('year', 'co2ppm', 'uncertainty')"
+"0","head(mauna_loa_yearly)"

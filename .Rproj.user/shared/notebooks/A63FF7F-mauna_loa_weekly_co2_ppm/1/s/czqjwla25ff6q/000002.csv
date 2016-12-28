@@ -1,0 +1,8 @@
+"0","if(!require(lazyeval)) {"
+"0","    install.packages('lazyeval')"
+"0","    library(lazyeval)"
+"0","}"
+"0","if(!require(ggplot2)) {"
+"0","    install.packages('ggplot2')"
+"0","    library(ggplot2)"
+"0","}"

@@ -1,0 +1,2 @@
+"0","mauna_loa_weekly <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_weekly_mlo.txt')"
+"0","head(mauna_loa_weekly)"

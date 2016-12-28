@@ -1,0 +1,7 @@
+"0","ggplot(data = law_dome %>% subset(year >= 1900), aes(year, co2ppm.inc)) +"
+"0","  geom_line() +"
+"0","  xlab('Year of Common Era') +"
+"0","  ylab('Change in CO2 Concentration PPM') + "
+"0","  ggtitle('Law Dome Ice Core CO2 Concentration Annual Rate of Change') +"
+"0","  scale_x_continuous(breaks = seq(1900, 2010, 10)) + "
+"0","  theme(axis.text.x = element_text(angle = -45, vjust = 0.7))"

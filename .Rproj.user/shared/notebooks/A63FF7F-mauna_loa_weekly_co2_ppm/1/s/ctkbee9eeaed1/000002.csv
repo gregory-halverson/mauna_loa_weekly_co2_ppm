@@ -1,0 +1,2 @@
+"0","names(mauna_loa_weekly) <- c('year', 'month', 'day', 'co2ppm')"
+"0","head(mauna_loa_weekly)"

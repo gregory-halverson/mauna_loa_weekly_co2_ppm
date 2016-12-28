@@ -1,0 +1,3 @@
+"0","mauna_loa_weekly$year <- year(mauna_loa_weekly$date)"
+"0","mauna_loa_weekly$yday <- yday(mauna_loa_weekly$date)"
+"0","head(mauna_loa_weekly)"

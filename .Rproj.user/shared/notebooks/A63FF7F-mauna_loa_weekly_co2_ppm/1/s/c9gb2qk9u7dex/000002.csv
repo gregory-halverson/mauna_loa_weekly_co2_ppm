@@ -1,0 +1,8 @@
+"0","plot("
+"0","  mauna_loa_weekly$date,"
+"0","  mauna_loa_weekly$co2ppm,"
+"0","  type = 'l',"
+"0","  xlab = 'Date',"
+"0","  ylab = 'CO2 Concentration PPM',"
+"0","  main = 'Mauna Loa Weekly Carbon Dioxide Concentration'"
+"0",")"

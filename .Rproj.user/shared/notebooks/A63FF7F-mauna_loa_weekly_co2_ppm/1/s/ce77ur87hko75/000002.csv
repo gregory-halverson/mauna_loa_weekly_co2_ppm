@@ -1,0 +1,1 @@
+"0","mauna_loa_weekly %>% subset(year(date) == 2015) %>% tail()"

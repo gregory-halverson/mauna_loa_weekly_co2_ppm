@@ -1,0 +1,4 @@
+"0","global_monthly <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_gl.txt')"
+"0","global_monthly <- global_monthly[, c(1, 2, 4)]"
+"0","names(global_monthly) <- c('year', 'month', 'co2ppm')"
+"0","global_monthly$date <- as.Date(paste(global_monthly$year, global_monthly$month, '01', sep = '-'), format = '%Y-%m-%d')"

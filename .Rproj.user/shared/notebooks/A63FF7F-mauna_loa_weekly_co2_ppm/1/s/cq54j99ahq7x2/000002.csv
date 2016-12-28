@@ -1,0 +1,4 @@
+"0","global_annual <- read.table('ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_gl.txt')"
+"0","names(global_annual) <- c('year', 'co2ppm', 'uncertainty')"
+"0","global_annual$co2ppm.inc <- c(NA, diff(global_annual$co2ppm))"
+"0","head(global_annual)"

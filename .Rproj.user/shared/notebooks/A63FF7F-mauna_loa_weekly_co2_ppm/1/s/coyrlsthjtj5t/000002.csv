@@ -1,0 +1,1 @@
+"0","mauna_loa_yearly %>% na.omit() %>% subset(co2ppm.inc %in% c(min(co2ppm.inc), max(co2ppm.inc)))"

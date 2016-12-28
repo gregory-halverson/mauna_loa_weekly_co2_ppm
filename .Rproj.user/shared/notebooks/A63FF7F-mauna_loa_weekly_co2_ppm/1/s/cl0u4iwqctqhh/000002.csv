@@ -1,0 +1,2 @@
+"0","mauna_loa_weekly <- mauna_loa_weekly[, c(1, 2, 3, 5)]"
+"0","head(mauna_loa_weekly)"

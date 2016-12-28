@@ -1,0 +1,5 @@
+"0","ggplot(data = mauna_loa_weekly %>% subset(year(date) == 2015), aes(date, co2ppm)) +"
+"0","  geom_line() +"
+"0","  xlab('Date') +"
+"0","  ylab('CO2 Concentration PPM') + "
+"0","  ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration')"

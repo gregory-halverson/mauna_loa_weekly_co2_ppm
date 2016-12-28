@@ -1,0 +1,6 @@
+"0","ggplot(data = mauna_loa_yearly, aes(year, co2ppm)) +"
+"0","    geom_ribbon(data = mauna_loa_yearly, aes(ymin = co2ppm - uncertainty, ymax = co2ppm + uncertainty), alpha=0.3) +"
+"0","  geom_line() +"
+"0","  xlab('Date') +"
+"0","  ylab('CO2 Concentration PPM') + "
+"0","  ggtitle('Mauna Loa Yearly Carbon Dioxide Concentration')"

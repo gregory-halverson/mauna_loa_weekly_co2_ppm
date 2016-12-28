@@ -1,0 +1,1 @@
+"0","mauna_loa_weekly %>% subset(year(date) == 2015) %>% subset(co2ppm == min(co2ppm))"

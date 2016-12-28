@@ -1,0 +1,8 @@
+"0","ggplot(data = mauna_loa_yearly, aes(year, co2ppm.inc)) +"
+"0","  geom_line() +"
+"0","  xlab('Year') +"
+"0","  ylab('Change in CO2 Concentration PPM') + "
+"0","  ggtitle('Mauna Loa Annual Increase in CO2 Concentration') +"
+"0","  stat_smooth(method = lm, color = 'dark blue') +"
+"0","  scale_x_continuous(breaks = seq(1960, 2020, 10)) + "
+"0","  theme(axis.text.x = element_text(angle = 0, vjust = 0.7))"

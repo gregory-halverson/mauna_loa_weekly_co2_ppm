@@ -1,0 +1,6 @@
+"0","ggplot(data = mauna_loa_weekly, aes(yday, co2ppm, colour = year, group = year)) +"
+"0","  geom_line() +"
+"0","  xlab('Day of Year') +"
+"0","  ylab('CO2 Concentration PPM') + "
+"0","  ggtitle('Mauna Loa Weekly Carbon Dioxide Concentration') +"
+"0","  scale_color_gradientn('Year', colors = rainbow(length(unique(mauna_loa_weekly$year))))"

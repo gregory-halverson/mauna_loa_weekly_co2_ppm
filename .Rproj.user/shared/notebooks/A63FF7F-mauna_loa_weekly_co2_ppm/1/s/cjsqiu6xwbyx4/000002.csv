@@ -1,0 +1,3 @@
+"0","mauna_loa_weekly$date <- as.Date(paste(mauna_loa_weekly$year, mauna_loa_weekly$month, mauna_loa_weekly$day, sep = '-'), format = '%Y-%m-%d')"
+"0","mauna_loa_weekly <- mauna_loa_weekly[, c('date', 'co2ppm')]"
+"0","head(mauna_loa_weekly)"
